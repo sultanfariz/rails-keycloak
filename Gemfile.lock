@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.2)
       public_suffix (>= 2.0.2, < 6.0)
+    bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -94,6 +95,9 @@ GEM
       railties
       sprockets-rails
     graphql (2.0.20)
+    graphql-batch (0.5.2)
+      graphql (>= 1.10, < 3)
+      promise.rb (~> 0.7.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.5)
@@ -131,6 +135,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-x64-mingw-ucrt)
       racc (~> 1.4)
+    promise.rb (0.7.4)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -215,11 +220,13 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  bcrypt (~> 3.1)
   bootsnap
   capybara
   debug
   graphiql-rails
   graphql (~> 2.0)
+  graphql-batch
   importmap-rails
   jbuilder
   puma (~> 5.0)

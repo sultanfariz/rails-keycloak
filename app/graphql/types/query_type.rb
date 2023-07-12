@@ -8,10 +8,13 @@ module Types
     # They will be entry points for queries on your schema.
 
     # TODO: remove me
-    field :users, String, null: false,
+    # field :users, [Types::UserType], null: false,
+    field :users, Types::UserType, null: false,
       description: "An example field added by the generator"
     def users
-      "Hello World!"
+      # user = authenticate!
+      # user
+      User.all
     end
   end
 end
